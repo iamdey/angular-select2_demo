@@ -1,0 +1,62 @@
+<div class="row">
+  <h1 class="page-header">
+    Select2
+    <small>dev page</small>
+  </h1>
+
+  <p>{{ 'HELLO_WORLD'|translate }}</p>
+
+  <p>{{ select2Model }}</p>
+
+    <div>
+        <label>select basic</label>
+        <select data-select2 data-width="'200px'">
+            <option value="1">AAA</option>
+            <option value="2">ABBBB</option>
+            <option value="3">ABBCCC</option>
+        </select>
+    </div>
+
+    <div>
+        <label>select w/ ng-model</label>
+        <select data-select2 data-width="'200px'" data-ng-model="select2Model.one">
+            <option value="1">AAA</option>
+            <option value="2">ABBBB</option>
+            <option value="3">ABBCCC</option>
+        </select>
+    </div>
+
+    <div>
+        <label>select w/ ng-options</label>
+        <select data-select2 data-width="'210px'" data-ng-model="select2Model.two" data-ng-options="o.text for o in select2Choices"></select>
+    </div>
+
+    <div>
+        <label>select w/ options</label>
+        <select data-select2="select2OptionsSimple" data-ng-model="select2Model.three" data-ng-options="o.text for o in select2Choices"></select>
+        <button data-ng-click="changeOptions">Change Options</button>
+    </div>
+
+    <div>
+        <label>select w/ options standard & promised values</label>
+        <input type="text" data-select2="select2Options" data-ng-model="select2Model.four"></select>
+    </div>
+
+    <hr/>
+
+    <p>{{ select2ModelMultiple }}</p>
+
+    <div>
+      <label>select w/ ng-model</label>
+      <select multiple="multiple" data-select2 data-width="'200px'" data-ng-model="select2ModelMultiple.one">
+          <option value="1">AAA</option>
+          <option value="2">ABBBB</option>
+          <option value="3">ABBCCC</option>
+      </select>
+    </div>
+
+    <div>
+        <label>select w/ options standard & promised values</label>
+        <input type="text" data-select2="select2OptionsMultiple" data-ng-model="select2ModelMultiple.four"></select>
+    </div>
+</div>

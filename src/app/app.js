@@ -3,7 +3,9 @@ angular.module( 'ngBoilerplate', [
   'templates-common',
   'ngBoilerplate.home',
   'ngBoilerplate.about',
-  'ui.router'
+  'ngBoilerplate.select2',
+  'ui.router',
+  'localytics.directives'
 ])
 
 .config( function myAppConfig ( $stateProvider, $urlRouterProvider ) {
@@ -22,4 +24,3 @@ angular.module( 'ngBoilerplate', [
 })
 
 ;
-
